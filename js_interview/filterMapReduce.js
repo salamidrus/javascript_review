@@ -50,11 +50,15 @@ let arr2 = [
   },
 ];
 
-let backendStudents = arr2.filter(
-  //   (el) => el.class == "Backend" || el.class == "Frontend"
-  //   (el) => ["Backend", "Frontend", "Mobile"].includes(el.class)
-  (el) => ["Backend", "Frontend", "Mobile"].includes(el.class)
-);
+let backendStudents = arr2
+  .filter(
+    //   (el) => el.class == "Backend" || el.class == "Frontend"
+    //   (el) => ["Backend", "Frontend", "Mobile"].includes(el.class)
+    (el) => ["Backend", "Frontend", "Mobile"].includes(el.class)
+  )
+  .map((el) => {
+    return { name: el.name, location: "Jakarta" };
+  });
 console.log(backendStudents);
 
 let obj = {
