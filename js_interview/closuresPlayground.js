@@ -40,12 +40,21 @@ let add = (function () {
 
 counter = 100;
 
-console.log(add());
-console.log(add());
-console.log(add());
+// console.log(add());
+// console.log(add());
+// console.log(add());
 
 // let count = add();
 // console.log(count());
 // console.log(count());
 // console.log(count());
 // console.log(count());
+
+function factorial(n) {
+  // code base
+  if (n == 1) return 1;
+  return n + factorial(n - 1);
+}
+
+let sol = factorial(5);
+console.log(sol);
